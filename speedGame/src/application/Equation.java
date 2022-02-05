@@ -38,7 +38,7 @@ public class Equation {
 	public Integer getFinalValue() {
 		return finalValue;
 	}
-	private void setFinalValue(Integer finalValue) {
+	public void setFinalValue(Integer finalValue) {
 		this.finalValue = finalValue;
 	}
 	public Integer getLocation() {
@@ -54,9 +54,32 @@ public class Equation {
 		this.color = color;
 	}
 	
-	public void printEquation() {
+	public void printSumEquation() {
 		System.out.println(this.firstValue + " + " + this.secondValue);
 	};
 
-
+	public void printProductEquation() {
+		System.out.println(this.firstValue + " + " + this.secondValue);
+	};
+	
+	public void printMinusEquation() {
+		if(this.finalValue > this.secondValue) {
+		System.out.println(this.firstValue + " * " + this.secondValue);
+		}
+		else{
+			System.out.println(this.secondValue + " - " + this.firstValue);
+			}
+	};
+	
+	public Integer sum(Integer firstInteger,Integer secondInteger) {
+		return firstInteger+secondInteger;
+	}
+	
+	public Integer product(Integer firstInteger,Integer secondInteger) {
+		return firstInteger*secondInteger;
+	}
+	public Integer minus(Integer firstInteger,Integer secondInteger) {
+		
+		return Math.abs(firstInteger-secondInteger);
+	}
 }
